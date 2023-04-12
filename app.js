@@ -15,7 +15,7 @@
     const Categoria = mongoose.model("categorias")
     const usuarios = require("./routes/usuario")
     const passport = require("passport")
-    //require("./config/auth")(passport)
+    require("./config/auth")(passport)
 
 
 
@@ -29,7 +29,6 @@
 
     app.use(passport.initialize())
     app.use(passport.session())
-
     app.use(flash())
 
     //MIDDLEWARE
